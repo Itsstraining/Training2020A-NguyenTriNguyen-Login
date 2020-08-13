@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LoginApp"
+    }
+  },
+  "defaultProject": "LoginApp",
+  "cli": {
+    "analytics": false
+  }
 }

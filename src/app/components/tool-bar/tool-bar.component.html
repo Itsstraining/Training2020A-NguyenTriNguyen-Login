@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <button mat-raised-button color="basic" (click)="router.navigate(['home'])"><mat-icon>camera_alt</mat-icon>Nguyen Nguyen</button>
+    <span class="example-spacer"></span>
+
+    <button *ngIf="authService.user==null" mat-icon-button class="mat-icon" aria-label="sign up">
+      <mat-icon routerLink='sign-up'>person_add</mat-icon>
+    </button>
+    <br>
+    <button *ngIf="authService.user==null" (click)='this.authService.login()' mat-icon-button class="mat-icon" aria-label="login">
+      <mat-icon>login</mat-icon>
+    </button>
+    <br>
+    <button *ngIf="authService.user!=null" (click)='this.authService.logout()' mat-icon-button class="mat-icon" aria-label="logout">
+      <mat-icon>accessible_forward</mat-icon>
+    </button>
+</mat-toolbar>

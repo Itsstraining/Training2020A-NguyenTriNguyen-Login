@@ -1,0 +1,72 @@
+<br>
+<div class="example-container">
+    <header style="font-size: xx-large ;">SIGN IN TO SEE MORE AWSOME THINGS</header>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="name@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+
+    </mat-form-field>
+</div>
+
+<form class="example-container" [formGroup]="">
+
+    <table class="example-container">
+        <tr>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input matInput placeholder="First name" required>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Last Name" required>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="example-container">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Choose your gender here</mat-label>
+            <mat-select>
+                <mat-option value="option">Male</mat-option>
+                <mat-option value="option">Female</mat-option>
+                <mat-option value="option">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+    </div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Confirmed your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Confirmed your password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="accent">
+        <mat-icon>done</mat-icon>
+        SUBMIT
+    </button>
+
+
+
+
+</form>
